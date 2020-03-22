@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    string s;
+	    cin>>s;
+	    int x =0,y=0, i=0;
+	    while(i<n) {
+	        char k=s[i];
+	        if (k=='L'){
+	            while (s[i]=='L' || s[i]=='R'){
+	                i++;
+	            }
+	            x--;
+	        }
+	        else  if (k=='R'){
+	            while (s[i]=='L' || s[i]=='R'){
+	                i++;
+	            }
+	            x++;
+	        } else  if (k=='U'){
+	            while (s[i]=='U' || s[i]=='D'){
+	                i++;
+	            }
+	            y++;
+	        }else  if (k=='D'){
+	            while (s[i]=='U' || s[i]=='D'){
+	                i++;
+	            }
+	            y--;
+	        }
+	        
+	       
+	    
+	    }
+	    cout<<x<<" "<<y<<endl;
+	}
+	return 0;
+}
